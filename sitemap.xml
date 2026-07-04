@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ciaobricks.app/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/"/>
+  </url>
+  <url>
+    <loc>https://ciaobricks.app/en/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/"/>
+  </url>
+  <url>
+    <loc>https://ciaobricks.app/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/"/>
+  </url>
+  <url>
+    <loc>https://ciaobricks.app/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ciaobricks.app/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/privacy/"/>
+  </url>
+  <url>
+    <loc>https://ciaobricks.app/fr/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ciaobricks.app/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/privacy/"/>
+  </url>
+</urlset>

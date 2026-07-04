@@ -52,9 +52,9 @@ html.dark .studs-bg { background-image: radial-gradient(circle at center, rgba(2
 
 /* Selettore lingua */
 .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
-.lang-switch button { font-family: inherit; font-weight: 800; font-size: 12px; letter-spacing: .03em; padding: 8px 10px; background: transparent; color: var(--muted); border: none; cursor: pointer; transition: background .15s ease, color .15s ease; }
-.lang-switch button:hover { color: var(--ink); }
-.lang-switch button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.lang-switch a, .lang-switch button { font-family: inherit; font-weight: 800; font-size: 12px; letter-spacing: .03em; padding: 8px 10px; background: transparent; color: var(--muted); border: none; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; transition: background .15s ease, color .15s ease; }
+.lang-switch a:hover, .lang-switch button:hover { color: var(--ink); }
+.lang-switch a[aria-current="page"], .lang-switch button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
 
 /* ═══════════════ BOTTONI ═══════════════ */
 .btn { display: inline-flex; align-items: center; gap: 10px; font-family: inherit; font-weight: 800; font-size: 15px; border: 1px solid transparent; border-radius: 16px; padding: 13px 20px; cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, opacity .15s ease; }

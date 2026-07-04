@@ -1,0 +1,11 @@
+{
+  "name": "ciaobricks-landing",
+  "private": true,
+  "description": "Landing page multilingua (IT/EN/FR) per ciaobricks",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.40.0"
+  }
+}

@@ -1,77 +1,23 @@
 /* ciaobricks — script condiviso (landing + privacy)
- * - i18n IT/EN/FR caricato da file esterni (assets/i18n/<lang>.json)
- *   applicato via data-i18n / data-i18n-html + meta SEO localizzati
+ * - evidenzia la lingua attiva nello switch (pagine statiche per lingua)
  * - toggle tema chiaro/scuro (persistito)
  * - mosaico live (solo se presente #mosaic)
  *
- * NOTA: le traduzioni sono caricate con fetch(), quindi la pagina va servita
- * via HTTP (es. GitHub Pages o `python3 -m http.server`). Aprendola da
- * file:// il fetch è bloccato dal browser e resta il contenuto HTML di
- * default (italiano).
+ * L'i18n non è più a runtime: ogni lingua ha le sue pagine statiche
+ * (/, /en/, /fr/) generate da build.js a partire da assets/i18n/*.json.
  */
 (function () {
   "use strict";
 
-  /* ═══════════════ I18N (IT/EN/FR da file esterni) ═══════════════ */
-  var LANGS = ["it", "en", "fr"];
-  var isPrivacy = document.body.getAttribute("data-page") === "privacy";
-  var I18N_BASE = isPrivacy ? "../assets/i18n/" : "assets/i18n/";
-  var CACHE = {};
-
-  function loadDict(lang) {
-    if (CACHE[lang]) return Promise.resolve(CACHE[lang]);
-    return fetch(I18N_BASE + lang + ".json")
-      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function (d) { CACHE[lang] = d; return d; });
-  }
-
-  function setMeta(selector, val) {
-    if (val == null) return;
-    var el = document.querySelector(selector);
-    if (el) el.setAttribute("content", val);
-  }
-
-  function render(lang, dict) {
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var v = dict[el.getAttribute("data-i18n")];
-      if (v != null) el.textContent = v;
-    });
-    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
-      var v = dict[el.getAttribute("data-i18n-html")];
-      if (v != null) el.innerHTML = v;
-    });
-    document.querySelectorAll(".lang-switch button").forEach(function (b) {
-      b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang ? "true" : "false");
-    });
-
-    /* Meta SEO localizzati */
-    if (isPrivacy) {
-      if (dict.pp_title) document.title = dict.pp_title + " — ciaobricks";
-      setMeta('meta[name="description"]', dict.pp_meta_desc);
+  /* ═══════════════ LINGUA ATTIVA NELLO SWITCH ═══════════════ */
+  var current = document.documentElement.lang || "it";
+  document.querySelectorAll(".lang-switch [data-lang]").forEach(function (el) {
+    if (el.getAttribute("data-lang") === current) {
+      el.setAttribute("aria-current", "page");
     } else {
-      if (dict.meta_title) document.title = dict.meta_title;
-      setMeta('meta[name="description"]', dict.meta_desc);
-      setMeta('meta[property="og:title"]', dict.og_title || dict.meta_title);
-      setMeta('meta[property="og:description"]', dict.og_desc);
+      el.removeAttribute("aria-current");
     }
-  }
-
-  function applyLang(lang) {
-    if (LANGS.indexOf(lang) < 0) lang = "it";
-    loadDict(lang).then(function (dict) {
-      render(lang, dict);
-      localStorage.setItem("cb-lang", lang);
-    }).catch(function () {
-      /* fallback: su file:// il fetch fallisce — resta il contenuto HTML
-         di default (italiano). Nessuna azione necessaria. */
-    });
-  }
-
-  document.querySelectorAll(".lang-switch button").forEach(function (b) {
-    b.addEventListener("click", function () { applyLang(b.getAttribute("data-lang")); });
   });
-  applyLang(window.__cbLang || "it");
 
   /* ═══════════════ TOGGLE TEMA ═══════════════ */
   var toggle = document.getElementById("theme-toggle");

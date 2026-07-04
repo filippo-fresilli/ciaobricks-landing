@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciaobricks — Transformez vos photos en briques</title>
+    <meta name="description" content="ciaobricks transforme n'importe quelle photo en mosaïque de briques façon LEGO® : aperçu tenon par tenon, instructions de montage et liste des pièces avec codes BrickLink. 100% sur l'appareil.">
+    <meta property="og:title" content="ciaobricks — Transformez vos photos en briques">
+    <meta property="og:description" content="De la photo à la mosaïque de briques en quelques secondes. Aperçu en direct, instructions et liste des pièces. Tout sur votre iPhone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ciaobricks.app/fr/">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="theme-color" content="#F56621">
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+    <meta property="og:image" content="https://ciaobricks.app/assets/logo.png">
+
+    <!-- SEO multilingua: URL per lingua + hreflang -->
+    <link rel="canonical" href="https://ciaobricks.app/fr/">
+    <link rel="alternate" hreflang="it" href="https://ciaobricks.app/">
+    <link rel="alternate" hreflang="en" href="https://ciaobricks.app/en/">
+    <link rel="alternate" hreflang="fr" href="https://ciaobricks.app/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://ciaobricks.app/">
+
+    <!-- Applica il tema prima del paint per evitare il flash -->
+    <script>
+      (function () {
+        var s = localStorage.getItem("cb-theme");
+        var dark = s ? s === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+
+  <body>
+    <!-- ═══════════════ NAV ═══════════════ -->
+    <header class="nav">
+      <div class="container nav-inner">
+        <a href="#top" class="brand" aria-label="ciaobricks — home">
+          <img class="brand-logo" src="../assets/logo.png" alt="Logo ciaobricks" width="28" height="28"> ciaobricks
+        </a>
+        <nav class="nav-links" aria-label="Principale">
+          <a href="#come-funziona" data-i18n="nav_how">Comment ça marche</a>
+          <a href="#funzioni" data-i18n="nav_features">Fonctions</a>
+          <a href="#palette" data-i18n="nav_palette">Palette</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        </nav>
+        <div class="nav-right">
+          <div class="lang-switch" role="group" aria-label="Lingua / Language / Langue">
+            <a hreflang="it" data-lang="it" href="../">IT</a>
+            <a hreflang="en" data-lang="en" href="../en/">EN</a>
+            <a hreflang="fr" data-lang="fr" href="./" aria-current="page">FR</a>
+          </div>
+          <button id="theme-toggle" class="icon-btn" aria-label="Cambia tema chiaro/scuro">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ico-sun" aria-hidden="true" style="display: none;"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="ico-moon" aria-hidden="true" style="display: block;"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          </button>
+          <a href="#scarica" class="btn btn-dark btn-sm appstore-sm" data-i18n="nav_appstore">App Store</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ═══════════════ HERO ═══════════════ -->
+      <section class="hero">
+        <div class="studs-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div>
+            <span class="badge"><span class="dot"></span> <span data-i18n="hero_badge">Bientôt sur l'App Store</span></span>
+            <h1 data-i18n-html="hero_h1">Transformez vos photos<br>en <span class="text-grad">briques</span>.</h1>
+            <p class="lead" data-i18n-html="hero_lead">ciaobricks transforme n'importe quelle photo en mosaïque de briques façon LEGO®. Choisissez une photo, réglez la grille et obtenez un <strong>aperçu en direct</strong>, des <strong>instructions de montage</strong> et la <strong>liste complète des pièces</strong>.</p>
+            <div id="scarica" class="hero-actions">
+              <!-- TODO: sostituire href="#scarica" con l'URL App Store al lancio -->
+              <a href="#scarica" class="btn btn-dark appstore">
+                <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.2 8.5c0-1.6 1.3-2.4 1.4-2.4-.8-1.1-2-1.3-2.4-1.3-1-.1-2 .6-2.5.6-.5 0-1.3-.6-2.2-.6-1.1 0-2.2.7-2.7 1.7-1.2 2-.3 5 .8 6.6.6.8 1.2 1.7 2.1 1.6.8 0 1.2-.5 2.2-.5 1 0 1.3.5 2.2.5.9 0 1.5-.8 2-1.6.7-.9.9-1.8.9-1.9-.1 0-1.8-.7-1.8-2.8zM9.6 3.7c.5-.6.8-1.4.7-2.2-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.7 2.1.8.1 1.6-.4 2-1z"></path></svg>
+                <span style="text-align:left"><span class="as-sub" data-i18n="hero_as_sub">Télécharger sur</span><span class="as-big">App Store</span></span>
+              </a>
+              <a href="#come-funziona" class="btn btn-ghost" data-i18n="hero_btn_how">Voir comment ça marche</a>
+            </div>
+            <p class="hero-note" data-i18n="hero_note">🔒 100% sur l'appareil · Sans compte · Sans suivi</p>
+          </div>
+
+          <div class="phone-wrap">
+            <div class="phone">
+              <div class="phone-notch"></div>
+              <canvas id="mosaic" width="600" height="1240" role="img" aria-label="Anteprima di una foto trasformata in mosaico di mattoncini."></canvas>
+              <div class="phone-cap" data-i18n="phone_cap">touchez pour régénérer ↺</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ COME FUNZIONA ═══════════════ -->
+      <section id="come-funziona" class="section">
+        <div class="container">
+          <p class="kicker" data-i18n="how_kicker">Comment ça marche</p>
+          <h2 class="h2" data-i18n="how_title">De la photo à la mosaïque en 3 étapes.</h2>
+          <ol class="steps">
+            <li class="card step">
+              <span class="step-num" style="background:var(--brick);color:#fff">1</span>
+              <h3 data-i18n="step1_t">Choisissez une photo</h3>
+              <p data-i18n="step1_d">Prenez-en une ou importez depuis votre galerie. Toute image convient.</p>
+            </li>
+            <li class="card step">
+              <span class="step-num" style="background:var(--blue);color:#fff">2</span>
+              <h3 data-i18n="step2_t">Réglez la grille</h3>
+              <p data-i18n="step2_d">Réglez la grille de 16×16 à 64×64 tenons et le nombre de couleurs. Appliquez filtres et retouches.</p>
+            </li>
+            <li class="card step">
+              <span class="step-num" style="background:var(--highlight);color:#141414">3</span>
+              <h3 data-i18n="step3_t">Construisez</h3>
+              <p data-i18n="step3_d">Suivez les instructions pas à pas et obtenez la liste des pièces avec les identifiants BrickLink et une estimation de prix.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ═══════════════ FUNZIONI ═══════════════ -->
+      <section id="funzioni" class="section alt">
+        <div class="container">
+          <p class="kicker" data-i18n="feat_kicker">Pourquoi ciaobricks</p>
+          <h2 class="h2" data-i18n="feat_title">Tout ce qu'il faut pour construire.</h2>
+          <div class="features">
+            <div class="card feature">
+              <div class="ficon i-brick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg></div>
+              <h3 data-i18n="f1_t">En quelques secondes</h3><p data-i18n="f1_d">De la photo à l'œuvre en briques presque en temps réel.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect></svg></div>
+              <h3 data-i18n="f2_t">39 couleurs BrickLink</h3><p data-i18n="f2_d">Palette associée à de vrais codes BrickLink : votre liste d'achats est prête.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-yellow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 4.6L19 9l-4 3.4L16 18l-4-2.6L8 18l1-5.6L5 9l5.1-1.4L12 3z"></path></svg></div>
+              <h3 data-i18n="f3_t">Filtres artistiques</h3><p data-i18n="f3_d">N&amp;B, Sépia, Cyanotype, Pop, Duotone et Game Boy pour styliser la photo.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-brick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"></path><circle cx="9" cy="6" r="2" fill="currentColor"></circle><circle cx="15" cy="12" r="2" fill="currentColor"></circle><circle cx="8" cy="18" r="2" fill="currentColor"></circle></svg></div>
+              <h3 data-i18n="f4_t">Réglages pro</h3><p data-i18n="f4_d">Exposition, contraste, saturation et cadres pour peaufiner chaque détail.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"></path></svg></div>
+              <h3 data-i18n="f5_t">Retouche tenon par tenon</h3><p data-i18n="f5_d">Ajustez chaque brique à la main pour un résultat parfait.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-yellow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="8" width="8" height="6" rx="1.5"></rect><rect x="13" y="8" width="8" height="6" rx="1.5"></rect><path d="M7 8V6M17 8V6"></path></svg></div>
+              <h3 data-i18n="f6_t">LEGO® ou génériques</h3><p data-i18n="f6_d">Choisissez des briques LEGO® originales ou génériques sans marque : la liste s'adapte.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-brick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z"></path></svg></div>
+              <h3 data-i18n="f7_t">Confidentialité totale</h3><p data-i18n="f7_d">Tout se passe sur l'appareil : sans compte, sans suivi, sans serveur.</p>
+            </div>
+            <div class="card feature">
+              <div class="ficon i-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"></path></svg></div>
+              <h3 data-i18n="f8_t">Multilingue</h3><p data-i18n="f8_d">Disponible en italien, anglais et français.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ PALETTE ═══════════════ -->
+      <section id="palette" class="section">
+        <div class="container palette-row">
+          <div>
+            <p class="kicker" data-i18n="pal_kicker">La palette</p>
+            <h2 class="h2" data-i18n="pal_title">39 couleurs, codes réels.</h2>
+            <p class="lead" style="margin-top:16px" data-i18n-html="pal_desc">Chaque couleur correspond à une vraie brique BrickLink. Une fois la mosaïque prête, vous avez déjà la <strong>liste des pièces</strong> avec quantités, couleurs et identifiants — prête pour l'achat.</p>
+          </div>
+          <div class="palette-grid" role="img" aria-label="I 39 colori della palette di ciaobricks">
+            <span class="stud" style="background:#FFFFFF"></span><span class="stud" style="background:#E6E3DA"></span><span class="stud" style="background:#A0A5A9"></span><span class="stud" style="background:#6C6E68"></span><span class="stud" style="background:#20272A"></span><span class="stud" style="background:#C91A09"></span><span class="stud" style="background:#720E0F"></span><span class="stud" style="background:#FF698F"></span><span class="stud" style="background:#F56621"></span><span class="stud" style="background:#FE8A18"></span><span class="stud" style="background:#F8BB3D"></span><span class="stud" style="background:#FFCC00"></span><span class="stud" style="background:#FFF03A"></span><span class="stud" style="background:#FEE788"></span><span class="stud" style="background:#BBE90B"></span><span class="stud" style="background:#A5CA18"></span><span class="stud" style="background:#4B9F4A"></span><span class="stud" style="background:#237841"></span><span class="stud" style="background:#184632"></span><span class="stud" style="background:#3EC2DD"></span><span class="stud" style="background:#6CC3EB"></span><span class="stud" style="background:#217DE8"></span><span class="stud" style="background:#1E5AA8"></span><span class="stud" style="background:#0055BF"></span><span class="stud" style="background:#0A3463"></span><span class="stud" style="background:#55A5AF"></span><span class="stud" style="background:#068BAF"></span><span class="stud" style="background:#901F76"></span><span class="stud" style="background:#C870A0"></span><span class="stud" style="background:#FF9ECD"></span><span class="stud" style="background:#AC78BA"></span><span class="stud" style="background:#845E4D"></span><span class="stud" style="background:#582A12"></span><span class="stud" style="background:#352100"></span><span class="stud" style="background:#E4CD9E"></span><span class="stud" style="background:#DCC48E"></span><span class="stud" style="background:#958A73"></span><span class="stud" style="background:#D9E4EC"></span><span class="stud" style="background:#F5CD2F"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ PRIVACY (teaser) ═══════════════ -->
+      <section class="container" style="padding-bottom:80px">
+        <div class="privacy">
+          <div class="studs-bg" aria-hidden="true"></div>
+          <div style="position:relative;max-width:640px">
+            <div class="ficon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg></div>
+            <h2 data-i18n="priv_title">Tout sur votre appareil. Zéro suivi.</h2>
+            <p data-i18n="priv_desc">Vos photos ne quittent jamais votre iPhone. Aucun serveur, aucun compte, aucun suivi. ciaobricks fonctionne entièrement hors ligne : votre créativité reste privée.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════ FAQ ═══════════════ -->
+      <section id="faq" class="section" style="padding-top:0">
+        <div class="container faq">
+          <p class="kicker" style="text-align:center" data-i18n="faq_kicker">FAQ</p>
+          <h2 class="h2" style="text-align:center" data-i18n="faq_title">Questions fréquentes.</h2>
+          <div style="margin-top:32px">
+            <details>
+              <summary><span data-i18n="q1">Faut-il des briques LEGO® originales ?</span> <span class="plus" aria-hidden="true">+</span></summary>
+              <p data-i18n="a1">Non. Vous pouvez choisir des briques LEGO® originales ou génériques/sans marque : la liste des pièces s'adapte automatiquement.</p>
+            </details>
+            <details>
+              <summary><span data-i18n="q2">Sur quels appareils fonctionne-t-elle ?</span> <span class="plus" aria-hidden="true">+</span></summary>
+              <p data-i18n="a2">ciaobricks est une app native pour iPhone et iPad avec une version récente d'iOS/iPadOS.</p>
+            </details>
+            <details>
+              <summary><span data-i18n="q3">Mes photos sont-elles en sécurité ?</span> <span class="plus" aria-hidden="true">+</span></summary>
+              <p data-i18n="a3">Oui. Tout le traitement se fait sur votre appareil : aucun envoi vers un serveur, aucun compte et aucun suivi.</p>
+            </details>
+            <details>
+              <summary><span data-i18n="q4">Comment acheter les briques ?</span> <span class="plus" aria-hidden="true">+</span></summary>
+              <p data-i18n="a4">L'app génère la liste complète des pièces avec quantités, couleurs et identifiants BrickLink, plus une estimation de prix : vous avez tout pour les commander.</p>
+            </details>
+            <details>
+              <summary><span data-i18n="q5">Dans quelles langues est-elle disponible ?</span> <span class="plus" aria-hidden="true">+</span></summary>
+              <p data-i18n="a5">Italien, anglais et français.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <span class="brand"><img class="brand-logo" src="../assets/logo.png" alt="Logo ciaobricks" width="28" height="28"> ciaobricks</span>
+            <p class="tagline" data-i18n="foot_tagline">Transformez vos photos en mosaïques de briques, directement depuis votre iPhone.</p>
+          </div>
+          <div>
+            <h4 data-i18n="foot_app">App</h4>
+            <ul>
+              <li><a href="#scarica" data-i18n="foot_dl">Télécharger sur l'App Store</a></li>
+              <li><a href="#come-funziona" data-i18n="nav_how">Comment ça marche</a></li>
+              <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 data-i18n="foot_contact">Contact</h4>
+            <ul>
+              <li><a href="mailto:feedback@ciaobricks.app">feedback@ciaobricks.app</a></li>
+              <li><a href="privacy/" data-i18n="foot_privacy">Politique de confidentialité</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="legal">
+          <p data-i18n="disclaimer">ciaobricks est une application indépendante, non affiliée, autorisée, sponsorisée ni approuvée par le groupe LEGO ou BrickLink. LEGO® et BrickLink® sont des marques du groupe LEGO.</p>
+          <p>© <span id="year">2026</span> ciaobricks</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../app.js"></script>
+  
+
+</body></html>
