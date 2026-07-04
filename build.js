@@ -133,7 +133,7 @@ function transformInPage(cfg) {
   );
   d.querySelectorAll("link[href]").forEach((el) => {
     const rel = el.getAttribute("rel") || "";
-    if (rel === "icon" || rel === "stylesheet")
+    if (rel.includes("icon") || rel === "stylesheet")
       el.setAttribute("href", bump(el.getAttribute("href")));
   });
 }
