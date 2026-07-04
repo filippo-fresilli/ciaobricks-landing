@@ -3,18 +3,40 @@
 Landing page for **ciaobricks**, a native iOS app that turns photos into
 LEGO®-style brick mosaics.
 
-Single self-contained `index.html` — Tailwind (Play CDN) + vanilla JS, no build
-step. Italian copy, ready to adapt to EN/FR. Includes a dark/light toggle and a
-live brick-mosaic mockup rendered on a `<canvas>` (no image assets).
+Vanilla HTML/CSS/JS, no build step. Fully trilingual (**IT / EN / FR**) with a
+language switch: UI copy **and** SEO meta (title, description, Open Graph) are
+localized at runtime. Includes a dark/light toggle and a live brick-mosaic
+mockup rendered on a `<canvas>`.
 
 ```
-index.html          # the whole page (HTML + Tailwind config + JS inline)
-assets/favicon.svg
+index.html            # landing page
+privacy/index.html    # privacy policy
+styles.css            # styles
+app.js                # shared JS: i18n loader, theme toggle, live mosaic
+assets/
+  logo.png            # brand logo / favicon / og:image
+  favicon.svg
+  i18n/
+    it.json           # translations + meta strings, one file per language
+    en.json
+    fr.json
 ```
+
+## Internationalization (i18n)
+
+All strings live in `assets/i18n/<lang>.json` (one file per language). Markup
+carries `data-i18n="key"` (text) or `data-i18n-html="key"` (rich text), and
+`app.js` fetches the right JSON and fills them in — plus it localizes the
+`<title>` and the description / Open Graph meta tags.
+
+To edit copy or add a language, just edit/add a JSON file (and add a button in
+the `.lang-switch` group). No build step.
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder:
+The translations are loaded with `fetch()`, so the site **must be served over
+HTTP** — opening `index.html` directly via `file://` leaves it in the default
+(Italian) copy because browsers block `file://` fetches.
 
 ```bash
 python3 -m http.server 8000   # then open http://localhost:8000
@@ -36,8 +58,7 @@ and a `CNAME` for `www` → `<user>.github.io`. Enable **Enforce HTTPS**.
 
 ## Notes
 
-- **Tailwind via CDN** is used for zero-build convenience; for production you may
-  want a compiled build for smaller size.
-- The App Store buttons and Privacy Policy link are placeholders (`#`) — wire
-  them up once available.
+- Styling is hand-written in `styles.css`; the **Nunito** webfont is loaded from
+  Google Fonts.
+- The App Store buttons are placeholders (`#`) — wire them up once available.
 - Legal: the LEGO®/BrickLink® disclaimer in the footer must stay.
