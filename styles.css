@@ -16,7 +16,7 @@ html.dark {
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
-  font-family: 'Nunito', ui-rounded, system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
   background: var(--bg); color: var(--ink); line-height: 1.6;
   -webkit-font-smoothing: antialiased; transition: background .3s ease, color .3s ease;
 }
