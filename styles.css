@@ -148,11 +148,11 @@ html.dark .appstore-btn { background: #fff; color: #000; border-color: #fff; }
 .feature p { font-size: 14.5px; color: var(--c-text-secondary); margin-top: 4px; }
 .ficon svg { width: 24px; height: 24px; }
 
-.privacy { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: #141414; color: #F4F1EA; padding: 56px 32px; }
-.privacy .studs-bg { opacity: .28; background-image: radial-gradient(circle at center, rgba(255,255,255,.06) 30%, transparent 32%); }
-.privacy .ficon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: var(--radius-thumb); background: rgba(255,255,255,.1); color: #fff; }
-.privacy h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-top: 20px; }
-.privacy p { color: rgba(244,241,234,.72); font-size: 18px; margin-top: 16px; max-width: 40em; }
+.spotlight { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: #141414; color: #F4F1EA; padding: 56px 32px; }
+.spotlight .studs-bg { opacity: .28; background-image: radial-gradient(circle at center, rgba(255,255,255,.06) 30%, transparent 32%); }
+.spotlight .ficon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: var(--radius-thumb); background: rgba(255,255,255,.1); color: #fff; }
+.spotlight h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin-top: 20px; }
+.spotlight p { color: rgba(244,241,234,.72); font-size: 18px; margin-top: 16px; max-width: 40em; }
 
 .faq { max-width: 720px; margin: 0 auto; }
 .faq details { background: var(--c-card); border: 1px solid var(--c-line); border-radius: var(--radius-card); padding: 2px 24px; margin-top: 12px; box-shadow: var(--shadow-row); }
