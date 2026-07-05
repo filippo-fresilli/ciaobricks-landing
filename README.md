@@ -91,7 +91,8 @@ and a `CNAME` for `www` → `<user>.github.io`. Enable **Enforce HTTPS**.
 - Styling is hand-written in `styles.css`, aligned to the app's design system:
   **DM Sans** (weights 400–700, from Google Fonts), yellow `#FFCC00` as the
   single action colour, adaptive system text colours, and the 3D hard-shadow
-  primary button. The design tokens live in the `:root` block of `styles.css`.
+  primary button. The design tokens live in the `:root` block of `styles.css`;
+  the full reference is in [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md).
 - The App Store buttons point to the `#scarica` download section — replace with
   the real App Store URL at launch (see the `TODO` in `index.html`).
 - Legal: the LEGO®/BrickLink® disclaimer in the footer must stay.
