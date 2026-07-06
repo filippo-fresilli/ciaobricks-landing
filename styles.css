@@ -148,17 +148,6 @@ html.dark .appstore-btn { background: #fff; color: #000; border-color: #fff; }
 .feature p { font-size: 14.5px; color: var(--c-text-secondary); margin-top: 4px; }
 .ficon svg { width: 24px; height: 24px; }
 
-/* Esempio before / after */
-.ba { margin-top: 40px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center; max-width: 860px; }
-.ba-item { margin: 0; }
-.ba-item img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-card); box-shadow: var(--shadow-card); border: 1px solid var(--c-line); }
-.ba-item figcaption { margin-top: 12px; text-align: center; font-weight: 600; font-size: 14px; color: var(--c-text-secondary); }
-.ba-arrow { font-size: 34px; font-weight: 700; color: var(--c-primary); line-height: 1; }
-@media (max-width: 720px) {
-  .ba { grid-template-columns: 1fr; gap: 8px; }
-  .ba-arrow { transform: rotate(90deg); justify-self: center; margin: 6px 0; }
-}
-
 .spotlight { position: relative; overflow: hidden; border-radius: var(--radius-xl); background: #141414; color: #F4F1EA; padding: 56px 32px; }
 .spotlight .studs-bg { opacity: .28; background-image: radial-gradient(circle at center, rgba(255,255,255,.06) 30%, transparent 32%); }
 .spotlight .ficon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: var(--radius-thumb); background: rgba(255,255,255,.1); color: #fff; }
